@@ -26,7 +26,7 @@ int main()
 
     while(nNumbers > 0)
     {
-        cout << "Your num? ";
+        cout << "Your num?: ";
         cin >> checkNum;
 
         if (checkNum % 6 == 0 && checkNum % 10 == 4)
