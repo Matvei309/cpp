@@ -29,7 +29,7 @@ int main()
         cout << "Your num?: ";
         cin >> checkNum;
 
-        if (checkNum % 6 == 0 && checkNum % 10 == 4)
+        if ( (checkNum % 5 == 0 || checkNum % 6 == 0) && checkNum % 10 == 0)
             counter += 1;
     
         nNumbers -= 1;
