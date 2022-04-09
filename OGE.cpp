@@ -1,23 +1,40 @@
 #include <iostream>
 using namespace std;
 
+/*
+    FOR
+    for (int counter = 0; counter < 30; ++counter)
+        cout << counter << "\t" << counter % 10 << endl;
+
+    WHILE
+    int counter = 0;
+    while (counter < 30)
+    {
+        cout << counter << "\t" << counter % 10 << endl;
+        ++counter; // counter += 1 // increase - увеличивать
+    }
+*/
+
 int main()
 { 
-    int startNum = 0;
-    int checkNum = 0;
+    int checkNum;
     int counter = 0;
-    cout << "Your num?";
-    cin >> startNum; 
-    while(startNum > 0)
+    int nNumbers; // декларирование переменной
+
+    cout << "How many numbers? ";
+    cin >> nNumbers; // сколько чисел введёт пользователь
+
+    while(nNumbers > 0)
     {
         cout << "Your num? ";
         cin >> checkNum;
-        if (checkNum / 6 % 10 && checkNum % 10 == 4)
-        {  
+
+        if (checkNum % 6 == 0 && checkNum % 10 == 4)
             counter += 1;
-        }
-        startNum -= 1;
+    
+        nNumbers -= 1;
     }
-    cout << "over " << counter << endl;
+    cout << "Result: " << counter << endl;
+    return 0;
 }
-// clear && g++ OGE.cpp && ./a.out
+// clear && g++ OGE.cpp -o OGE.out && ./OGE.out
