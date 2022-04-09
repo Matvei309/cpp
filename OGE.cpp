@@ -6,18 +6,19 @@ int main()
     int startNum = 0;
     int checkNum = 0;
     int counter = 0;
-    cout << "Your num?";
+    
+    cout << "How numbers?: ";
     cin >> startNum; 
-    while(startNum > 0)
+
+    for (; startNum > 0; startNum--)
     {
-        cout << "Your num? ";
+        cout << "Your num?: ";
         cin >> checkNum;
-        if (checkNum / 6 % 10 && checkNum % 10 == 4)
-        {  
+
+        if (checkNum % 6 == 0 && checkNum % 10 == 4)
             counter += 1;
-        }
-        startNum -= 1;
     }
     cout << "over " << counter << endl;
+    return 0;
 }
 // clear && g++ OGE.cpp && ./a.out
