@@ -10,15 +10,17 @@ int main()
     cout << "How numbers?: ";
     cin >> startNum; 
 
-    for (; startNum > 0; startNum--)
+    
+    while (startNum > 0)
     {
         cout << "Your num?: ";
         cin >> checkNum;
-
         if (checkNum % 6 == 0 && checkNum % 10 == 4)
             counter += 1;
+        startNum--;
     }
+    
     cout << "over " << counter << endl;
     return 0;
 }
-// clear && g++ OGE.cpp && ./a.out
+// clear && g++ OGE.cpp -o OGE.out && ./OGE.out
