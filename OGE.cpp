@@ -1,14 +1,25 @@
 #include <iostream>
 using namespace std;
 
+/*
+    FOR
+    for (int counter = 0; counter < 30; ++counter)
+        cout << counter << "\t" << counter % 10 << endl;
+
+    WHILE
+    int counter = 0;
+    while (counter < 30)
+    {
+        cout << counter << "\t" << counter % 10 << endl;
+        ++counter; // counter += 1 // increase - увеличивать
+    }
+*/
+
 int main()
 { 
-    int startNum = 0;
-    int checkNum = 0;
+    int checkNum;
     int counter = 0;
-    
-    cout << "How numbers?: ";
-    cin >> startNum; 
+    int nNumbers; // декларирование переменной
 
     
     while (startNum > 0)
