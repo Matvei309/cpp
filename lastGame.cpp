@@ -5,7 +5,15 @@ using namespace std;
 
 int main()
 {
-    srand(static_cast<unsigned int>(time(0)));
+    srand(static_cast<unsigned int>(time(0))); // получить случайное число для начального посева
+
+    cout << time(0) << "s " << time(0) / 60 / 60 << "h " << time(0) / 60 / 60 / 24 << "d ";
+    cout << time(0) / 60 / 60 / 24 / 365 << "y " << endl; // timestamp
+
+    // rand() []
+    // rand() % 100 [0, 99]
+    // rand() % 100 + 1 [1, 100]
+
     int randomNum = rand() % 100 + 1;
     int playerNum;
     int counter = 0;
@@ -13,17 +21,17 @@ int main()
     
     do
     {
-    cout << "enter your num ";
-    cin >> playerNum;
-    counter++;
-    if(playerNum > randomNum)
-       cout << "Too hight" << endl;
-    else if(playerNum < randomNum)
-        cout << "Too low" << endl;
-    else
-        cout << "you right" << endl;
-    }       
-        while (playerNum != randomNum);
+        cout << "enter your num ";
+        cin >> playerNum;
+        counter++;
+     
+        if (playerNum > randomNum)
+            cout << "Too high" << endl;
+        else if (playerNum < randomNum)
+            cout << "Too low" << endl;
+        else
+            cout << "you right" << endl;
+    } while (playerNum != randomNum);
 
     cout << "Your try " << counter << endl;
     return 0;
