@@ -5,6 +5,16 @@ using namespace std;
 
 int main()
 {
+    // cout << static_cast<unsigned int>(-time(0)) << endl;
+    // srand(time(0));    
+
+    const int LOW = 123;
+    const int UP  = 200;
+
+    for (int i = 0; i < 5; i++)    
+        cout << i + 1 << '\t' << rand() % (UP - LOW + 1) + LOW << endl;
+
+    return 0;
     srand(static_cast<unsigned int>(time(0))); // получить случайное число для начального посева
 
     cout << time(0) << "s " << time(0) / 60 / 60 << "h " << time(0) / 60 / 60 / 24 << "d ";
