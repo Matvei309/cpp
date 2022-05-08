@@ -5,19 +5,7 @@ using namespace std;
 
 int main()
 {
-<<<<<<< HEAD
     srand(static_cast < unsigned int > (time(0)));
-=======
-    srand(static_cast<unsigned int>(time(0))); // получить случайное число для начального посева
-
-    cout << time(0) << "s " << time(0) / 60 / 60 << "h " << time(0) / 60 / 60 / 24 << "d ";
-    cout << time(0) / 60 / 60 / 24 / 365 << "y " << endl; // timestamp
-
-    // rand() []
-    // rand() % 100 [0, 99]
-    // rand() % 100 + 1 [1, 100]
-
->>>>>>> 48014315c1cf0c94d92638fca9781fa3359b2778
     int randomNum = rand() % 100 + 1;
     int playerNum;
     int counter = 0;
